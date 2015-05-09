@@ -1,0 +1,8 @@
+E:\src\PagoElectronico\bin\Debug\PagoElectronico.exe
+E:\src\PagoElectronico\bin\Debug\PagoElectronico.pdb
+E:\src\PagoElectronico\obj\Debug\ResolveAssemblyReference.cache
+E:\src\PagoElectronico\obj\Debug\PagoElectronico.ABM_Rol.Rol_Nuevo.resources
+E:\src\PagoElectronico\obj\Debug\PagoElectronico.Properties.Resources.resources
+E:\src\PagoElectronico\obj\Debug\PagoElectronico.csproj.GenerateResource.Cache
+E:\src\PagoElectronico\obj\Debug\PagoElectronico.exe
+E:\src\PagoElectronico\obj\Debug\PagoElectronico.pdb
