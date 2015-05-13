@@ -24,7 +24,8 @@ namespace PagoElectronico
         private void crearToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ABM_Rol.Rol_Edicion formularioRol = new ABM_Rol.Rol_Edicion();
-
+            formularioRol.Dock = DockStyle.Fill;
+            formularioRol.AllowDrop = false;
             formularioRol.TopLevel = false;
             formularioRol.AutoScroll = true;
             panel1.Controls.Add(formularioRol);
