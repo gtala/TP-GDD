@@ -1,0 +1,11 @@
+E:\src\PagoElectronico\bin\Release\PagoElectronico.exe
+E:\src\PagoElectronico\bin\Release\PagoElectronico.pdb
+E:\src\PagoElectronico\obj\Release\ResolveAssemblyReference.cache
+E:\src\PagoElectronico\obj\Release\PagoElectronico.Properties.Resources.resources
+E:\src\PagoElectronico\obj\Release\PagoElectronico.csproj.GenerateResource.Cache
+E:\src\PagoElectronico\obj\Release\PagoElectronico.exe
+E:\src\PagoElectronico\obj\Release\PagoElectronico.pdb
+E:\src\PagoElectronico\bin\Release\PagoElectronico.Negocio.dll
+E:\src\PagoElectronico\bin\Release\PagoElectronico.Negocio.pdb
+E:\src\PagoElectronico\obj\Release\PagoElectronico.ABM_Rol.Rol_Edicion.resources
+E:\src\PagoElectronico\obj\Release\PagoElectronico.Form1.resources

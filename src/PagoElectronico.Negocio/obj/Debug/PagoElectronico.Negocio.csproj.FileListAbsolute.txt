@@ -1,0 +1,7 @@
+E:\src\PagoElectronico.Negocio\bin\Debug\PagoElectronico.Negocio.dll
+E:\src\PagoElectronico.Negocio\bin\Debug\PagoElectronico.Negocio.pdb
+E:\src\PagoElectronico.Negocio\bin\Debug\PagoElectronico.Datos.dll
+E:\src\PagoElectronico.Negocio\bin\Debug\PagoElectronico.Datos.pdb
+E:\src\PagoElectronico.Negocio\obj\Debug\ResolveAssemblyReference.cache
+E:\src\PagoElectronico.Negocio\obj\Debug\PagoElectronico.Negocio.dll
+E:\src\PagoElectronico.Negocio\obj\Debug\PagoElectronico.Negocio.pdb

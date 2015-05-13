@@ -1,0 +1,5 @@
+E:\src\PagoElectronico.Datos\bin\Release\PagoElectronico.Datos.dll
+E:\src\PagoElectronico.Datos\bin\Release\PagoElectronico.Datos.pdb
+E:\src\PagoElectronico.Datos\obj\Release\ResolveAssemblyReference.cache
+E:\src\PagoElectronico.Datos\obj\Release\PagoElectronico.Datos.dll
+E:\src\PagoElectronico.Datos\obj\Release\PagoElectronico.Datos.pdb
