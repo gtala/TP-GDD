@@ -1,0 +1,14 @@
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\clases\bin\Release\clases.dll
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\clases\bin\Release\clases.pdb
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\clases\obj\Release\ResolveAssemblyReference.cache
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\clases\obj\Release\clases.Properties.Resources.resources
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\clases\obj\Release\clases.csproj.GenerateResource.Cache
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\clases\obj\Release\clases.dll
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\clases\obj\Release\clases.pdb
+E:\frbapagoelectronico\clases\bin\Release\clases.dll
+E:\frbapagoelectronico\clases\bin\Release\clases.pdb
+E:\frbapagoelectronico\clases\obj\Release\ResolveAssemblyReference.cache
+E:\frbapagoelectronico\clases\obj\Release\clases.Properties.Resources.resources
+E:\frbapagoelectronico\clases\obj\Release\clases.csproj.GenerateResource.Cache
+E:\frbapagoelectronico\clases\obj\Release\clases.dll
+E:\frbapagoelectronico\clases\obj\Release\clases.pdb

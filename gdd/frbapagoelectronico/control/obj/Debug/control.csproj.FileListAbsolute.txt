@@ -1,0 +1,10 @@
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\control\bin\Debug\control.dll
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\control\bin\Debug\control.pdb
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\control\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\control\obj\Debug\control.dll
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\control\obj\Debug\control.pdb
+E:\frbapagoelectronico\control\bin\Debug\control.dll
+E:\frbapagoelectronico\control\bin\Debug\control.pdb
+E:\frbapagoelectronico\control\obj\Debug\ResolveAssemblyReference.cache
+E:\frbapagoelectronico\control\obj\Debug\control.dll
+E:\frbapagoelectronico\control\obj\Debug\control.pdb

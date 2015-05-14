@@ -1,0 +1,36 @@
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\frbapagoelectronico\bin\Release\frbapagoelectronico.exe.config
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\frbapagoelectronico\bin\Release\frbapagoelectronico.exe
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\frbapagoelectronico\bin\Release\frbapagoelectronico.pdb
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\frbapagoelectronico\bin\Release\clases.dll
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\frbapagoelectronico\bin\Release\control.dll
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\frbapagoelectronico\bin\Release\clases.pdb
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\frbapagoelectronico\bin\Release\control.pdb
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\frbapagoelectronico\obj\Release\ResolveAssemblyReference.cache
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\frbapagoelectronico\obj\Release\frbapagoelectronico.Login.logueo1.resources
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\frbapagoelectronico\obj\Release\frbapagoelectronico.Login.logueo2.resources
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\frbapagoelectronico\obj\Release\frbapagoelectronico.Properties.Resources.resources
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\frbapagoelectronico\obj\Release\frbapagoelectronico.csproj.GenerateResource.Cache
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\frbapagoelectronico\obj\Release\frbapagoelectronico.exe
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\frbapagoelectronico\obj\Release\frbapagoelectronico.pdb
+E:\frbapagoelectronico\frbapagoelectronico\bin\Release\frbapagoelectronico.exe.config
+E:\frbapagoelectronico\frbapagoelectronico\bin\Release\frbapagoelectronico.exe
+E:\frbapagoelectronico\frbapagoelectronico\bin\Release\frbapagoelectronico.pdb
+E:\frbapagoelectronico\frbapagoelectronico\bin\Release\clases.dll
+E:\frbapagoelectronico\frbapagoelectronico\bin\Release\control.dll
+E:\frbapagoelectronico\frbapagoelectronico\bin\Release\clases.pdb
+E:\frbapagoelectronico\frbapagoelectronico\bin\Release\control.pdb
+E:\frbapagoelectronico\frbapagoelectronico\obj\Release\ResolveAssemblyReference.cache
+E:\frbapagoelectronico\frbapagoelectronico\obj\Release\frbapagoelectronico.ABM_Clientes.frminsertacliente.resources
+E:\frbapagoelectronico\frbapagoelectronico\obj\Release\frbapagoelectronico.ABM_Rol.frminsertrol.resources
+E:\frbapagoelectronico\frbapagoelectronico\obj\Release\frbapagoelectronico.ABM_Rol.frmmodificarol.resources
+E:\frbapagoelectronico\frbapagoelectronico\obj\Release\frbapagoelectronico.ABM_Rol.listadorol.resources
+E:\frbapagoelectronico\frbapagoelectronico\obj\Release\frbapagoelectronico.ABM_Usuarios.frminsertausuario.resources
+E:\frbapagoelectronico\frbapagoelectronico\obj\Release\frbapagoelectronico.ABM_Usuarios.frmmodifusuario.resources
+E:\frbapagoelectronico\frbapagoelectronico\obj\Release\frbapagoelectronico.ABM_Usuarios.listusuario.resources
+E:\frbapagoelectronico\frbapagoelectronico\obj\Release\frbapagoelectronico.Login.logueo1.resources
+E:\frbapagoelectronico\frbapagoelectronico\obj\Release\frbapagoelectronico.Login.logueo2.resources
+E:\frbapagoelectronico\frbapagoelectronico\obj\Release\frbapagoelectronico.Login.menu.resources
+E:\frbapagoelectronico\frbapagoelectronico\obj\Release\frbapagoelectronico.Properties.Resources.resources
+E:\frbapagoelectronico\frbapagoelectronico\obj\Release\frbapagoelectronico.csproj.GenerateResource.Cache
+E:\frbapagoelectronico\frbapagoelectronico\obj\Release\frbapagoelectronico.exe
+E:\frbapagoelectronico\frbapagoelectronico\obj\Release\frbapagoelectronico.pdb
