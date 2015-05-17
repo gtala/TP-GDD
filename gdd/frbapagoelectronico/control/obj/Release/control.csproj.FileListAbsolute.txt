@@ -1,0 +1,10 @@
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\control\bin\Release\control.dll
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\control\bin\Release\control.pdb
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\control\obj\Release\ResolveAssemblyReference.cache
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\control\obj\Release\control.dll
+C:\Users\maxiutn\Documents\Visual Studio 2008\Projects\frbapagoelectronico\control\obj\Release\control.pdb
+E:\frbapagoelectronico\control\bin\Release\control.dll
+E:\frbapagoelectronico\control\bin\Release\control.pdb
+E:\frbapagoelectronico\control\obj\Release\ResolveAssemblyReference.cache
+E:\frbapagoelectronico\control\obj\Release\control.dll
+E:\frbapagoelectronico\control\obj\Release\control.pdb
