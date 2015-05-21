@@ -9,3 +9,22 @@ E:\src\PagoElectronico\bin\Debug\PagoElectronico.Negocio.dll
 E:\src\PagoElectronico\bin\Debug\PagoElectronico.Negocio.pdb
 E:\src\PagoElectronico\obj\Debug\PagoElectronico.ABM_Rol.Rol_Edicion.resources
 E:\src\PagoElectronico\obj\Debug\PagoElectronico.Principal.resources
+E:\src\PagoElectronico\bin\Debug\PagoElectronico.Datos.dll
+E:\src\PagoElectronico\bin\Debug\PagoElectronico.Datos.pdb
+E:\src\PagoElectronico\obj\Debug\PagoElectronico.ABM_Rol.Rol_Listado.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.exe
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.pdb
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\bin\Debug\PagoElectronico.exe
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\bin\Debug\PagoElectronico.pdb
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\bin\Debug\PagoElectronico.Negocio.dll
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\bin\Debug\PagoElectronico.Negocio.pdb
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.ABM_Rol.Rol_Edicion.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.ABM_Rol.Rol_Listado.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.Principal.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.Properties.Resources.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.csproj.GenerateResource.Cache
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\bin\Debug\PagoElectronico.Datos.dll
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\bin\Debug\PagoElectronico.Datos.pdb
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\bin\Debug\PagoElectronico.exe.config
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\bin\Debug\PagoElectronico.UI.exe.config

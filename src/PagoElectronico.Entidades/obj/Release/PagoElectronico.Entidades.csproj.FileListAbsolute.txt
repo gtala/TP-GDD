@@ -1,0 +1,10 @@
+E:\src\PagoElectronico.Entidades\bin\Release\PagoElectronico.Entidades.dll
+E:\src\PagoElectronico.Entidades\bin\Release\PagoElectronico.Entidades.pdb
+E:\src\PagoElectronico.Entidades\obj\Release\ResolveAssemblyReference.cache
+E:\src\PagoElectronico.Entidades\obj\Release\PagoElectronico.Entidades.dll
+E:\src\PagoElectronico.Entidades\obj\Release\PagoElectronico.Entidades.pdb
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico.Entidades\bin\Release\PagoElectronico.Entidades.dll
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico.Entidades\bin\Release\PagoElectronico.Entidades.pdb
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico.Entidades\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico.Entidades\obj\Release\PagoElectronico.Entidades.dll
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico.Entidades\obj\Release\PagoElectronico.Entidades.pdb

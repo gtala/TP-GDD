@@ -1,0 +1,10 @@
+E:\src\PagoElectronico.Entidades\bin\Debug\PagoElectronico.Entidades.dll
+E:\src\PagoElectronico.Entidades\bin\Debug\PagoElectronico.Entidades.pdb
+E:\src\PagoElectronico.Entidades\obj\Debug\ResolveAssemblyReference.cache
+E:\src\PagoElectronico.Entidades\obj\Debug\PagoElectronico.Entidades.dll
+E:\src\PagoElectronico.Entidades\obj\Debug\PagoElectronico.Entidades.pdb
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico.Entidades\bin\Debug\PagoElectronico.Entidades.dll
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico.Entidades\bin\Debug\PagoElectronico.Entidades.pdb
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico.Entidades\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico.Entidades\obj\Debug\PagoElectronico.Entidades.dll
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico.Entidades\obj\Debug\PagoElectronico.Entidades.pdb

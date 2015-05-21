@@ -8,4 +8,20 @@ E:\src\PagoElectronico\obj\Release\PagoElectronico.pdb
 E:\src\PagoElectronico\bin\Release\PagoElectronico.Negocio.dll
 E:\src\PagoElectronico\bin\Release\PagoElectronico.Negocio.pdb
 E:\src\PagoElectronico\obj\Release\PagoElectronico.ABM_Rol.Rol_Edicion.resources
-E:\src\PagoElectronico\obj\Release\PagoElectronico.Form1.resources
+E:\src\PagoElectronico\obj\Release\PagoElectronico.Principal.resources
+E:\src\PagoElectronico\bin\Release\PagoElectronico.Datos.dll
+E:\src\PagoElectronico\bin\Release\PagoElectronico.Datos.pdb
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.ABM_Rol.Rol_Edicion.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.ABM_Rol.Rol_Listado.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.Principal.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.Properties.Resources.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.csproj.GenerateResource.Cache
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.pdb
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\bin\Release\PagoElectronico.exe
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\bin\Release\PagoElectronico.pdb
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\bin\Release\PagoElectronico.Datos.dll
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\bin\Release\PagoElectronico.Negocio.dll
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\bin\Release\PagoElectronico.Negocio.pdb
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\bin\Release\PagoElectronico.Datos.pdb
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.exe

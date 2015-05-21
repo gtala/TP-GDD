@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("PagoElectronico.Datos")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("-")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("PagoElectronico.Datos")]
-[assembly: AssemblyCopyright("Copyright © - 2015")]
+[assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1b08a0fd-27ac-4eb9-a3e5-0a3889a9fa2c")]
+[assembly: Guid("06d09973-d903-4578-9c8a-3c99545ff729")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -5,3 +5,12 @@ E:\src\PagoElectronico.Negocio\obj\Release\PagoElectronico.Negocio.dll
 E:\src\PagoElectronico.Negocio\obj\Release\PagoElectronico.Negocio.pdb
 E:\src\PagoElectronico.Negocio\bin\Release\PagoElectronico.Datos.dll
 E:\src\PagoElectronico.Negocio\bin\Release\PagoElectronico.Datos.pdb
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico.Negocio\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico.Negocio\obj\Release\PagoElectronico.Negocio.pdb
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico.Negocio\bin\Release\PagoElectronico.Negocio.dll
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico.Negocio\bin\Release\PagoElectronico.Negocio.pdb
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico.Negocio\obj\Release\PagoElectronico.Negocio.dll
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico.Negocio\bin\Release\PagoElectronico.Datos.dll
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico.Negocio\bin\Release\PagoElectronico.Entidades.dll
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico.Negocio\bin\Release\PagoElectronico.Datos.pdb
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico.Negocio\bin\Release\PagoElectronico.Entidades.pdb

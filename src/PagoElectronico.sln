@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual C# Express 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagoElectronico", "PagoElectronico\PagoElectronico.csproj", "{1A425235-25E0-4A09-B3C4-84F19D9A2184}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagoElectronico.UI", "PagoElectronico\PagoElectronico.UI.csproj", "{1A425235-25E0-4A09-B3C4-84F19D9A2184}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagoElectronico.Negocio", "PagoElectronico.Negocio\PagoElectronico.Negocio.csproj", "{C6620441-3A5C-4D43-840B-38EFEC83F66A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagoElectronico.Datos", "PagoElectronico.Datos\PagoElectronico.Datos.csproj", "{90D0A8DA-966C-4808-BF2B-1AE4B64967ED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagoElectronico.Entidades", "PagoElectronico.Entidades\PagoElectronico.Entidades.csproj", "{395EF640-8A14-4555-97F1-E3E4D816E084}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagoElectronico.Datos", "PagoElectronico.Datos\PagoElectronico.Datos.csproj", "{D02F17B6-AAD4-4956-A11C-2CB4BA7E3C09}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +23,14 @@ Global
 		{C6620441-3A5C-4D43-840B-38EFEC83F66A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6620441-3A5C-4D43-840B-38EFEC83F66A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6620441-3A5C-4D43-840B-38EFEC83F66A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{90D0A8DA-966C-4808-BF2B-1AE4B64967ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{90D0A8DA-966C-4808-BF2B-1AE4B64967ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{90D0A8DA-966C-4808-BF2B-1AE4B64967ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{90D0A8DA-966C-4808-BF2B-1AE4B64967ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{395EF640-8A14-4555-97F1-E3E4D816E084}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{395EF640-8A14-4555-97F1-E3E4D816E084}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{395EF640-8A14-4555-97F1-E3E4D816E084}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{395EF640-8A14-4555-97F1-E3E4D816E084}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D02F17B6-AAD4-4956-A11C-2CB4BA7E3C09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D02F17B6-AAD4-4956-A11C-2CB4BA7E3C09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D02F17B6-AAD4-4956-A11C-2CB4BA7E3C09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D02F17B6-AAD4-4956-A11C-2CB4BA7E3C09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
