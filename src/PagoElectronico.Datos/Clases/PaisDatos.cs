@@ -27,8 +27,8 @@ namespace PagoElectronico.Datos.Clases
                 //     a una lista de objetos de tipo Pais.
                 List<Pais> lstPaises = dtPaises.AsEnumerable().Select(x => new Pais
                 {
-                    Pais_Codigo = Convert.ToInt32(Convert.ToString(x["Pais_Codigo"])),
-                    Pais_Descipcion = Convert.ToString(x["Pais_Desc"] ?? string.Empty)
+                    Codigo = Convert.ToInt32(Convert.ToString(x["Pais_Codigo"])),
+                    Descipcion = Convert.ToString(x["Pais_Desc"] ?? string.Empty)
                 }).ToList();
 
                 return lstPaises;

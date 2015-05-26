@@ -4,29 +4,53 @@ using System.Windows.Forms;
 using PagoElectronico.Entidades.Clases;
 using PagoElectronico.FormulariosBase;
 using PagoElectronico.Negocio.Clases;
+using System.ComponentModel;
+using PagoElectronico.Util;
 
 namespace PagoElectronico.ABM_Cliente
 {
-    partial class ClienteListado : FormularioListadoBase
+    public partial class ClienteListado : FormularioListadoBase
     {
         private ClienteNegocio miClienteNegocio;
         private ClienteEdicion miClienteEdicion;
+        private List<Cliente> lstClientes;
+        Dictionary<string, object> lstFiltros;
 
         #region - Métodos -
 
         public ClienteListado()
         {
             InitializeComponent();
+            CargaInicialCombos();
+            ValidacionesIniciales();
+        }
+
+        private void CargaInicialCombos()
+        {
+            try
+            {
+                ManejadorCombos.CargarComboPais(ref cmbFiltroPais);
+                ManejadorCombos.CargarComoboTipoDocumento(ref cmbTipoDocumento);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        private void ValidacionesIniciales()
+        {
+            txtFiltroNombre.MaxLength = 255;
+            txtFiltroApellido.MaxLength = 255;
+            txtMail.MaxLength = 255;
+            numNroDocumento.MaxLength = 18;
         }
 
         private void BuscarClientes()
         {
             try
             {
-                miClienteNegocio = new ClienteNegocio();
-                List<Cliente> lstClientes = new List<Cliente>();
-                lstClientes = miClienteNegocio.ObtenerClientes();
-                dgListado.DataSource = lstClientes;
+                CargarGrilla();
             }
             catch (Exception)
             {
@@ -34,11 +58,120 @@ namespace PagoElectronico.ABM_Cliente
             }
         }
 
+        public void CargarGrilla()
+        {
+            try
+            {
+                lstFiltros = ObtenerFiltros();
+
+                dgListado.DataSource = null;
+                miClienteNegocio = new ClienteNegocio();
+                lstClientes = miClienteNegocio.ObtenerClientes(lstFiltros);
+                dgListado.ColumnCount = 13;
+                dgListado.AutoGenerateColumns = false;
+                dgListado.Columns[0].Name = "Código";
+                dgListado.Columns[0].DataPropertyName = "Codigo";
+                dgListado.Columns[0].Visible = false;
+                dgListado.Columns[1].Name = "Nombre";
+                dgListado.Columns[1].DataPropertyName = "Nombre";
+                dgListado.Columns[2].Name = "Apellido";
+                dgListado.Columns[2].DataPropertyName = "Apellido";
+                dgListado.Columns[3].Name = "Tipo Documento";
+                dgListado.Columns[3].DataPropertyName = "Tipo_Doc_Desc";
+                dgListado.Columns[4].Name = "Número Documento";
+                dgListado.Columns[4].DataPropertyName = "Nro_Documento";
+                dgListado.Columns[5].Name = "País";
+                dgListado.Columns[5].DataPropertyName = "Pais_Descripcion";
+                dgListado.Columns[6].Name = "Fecha Nacimiento";
+                dgListado.Columns[6].DataPropertyName = "Fecha_Nacimiento";
+                dgListado.Columns[7].Name = "Domicilio Calle";
+                dgListado.Columns[7].DataPropertyName = "Domicilio_Calle";
+                dgListado.Columns[8].Name = "Domicilio Número";
+                dgListado.Columns[8].DataPropertyName = "Domicilio_Nro";
+                dgListado.Columns[9].Name = "Domicilio Piso";
+                dgListado.Columns[9].DataPropertyName = "Domicilio_Piso";
+                dgListado.Columns[10].Name = "Domicilio Departamento";
+                dgListado.Columns[10].DataPropertyName = "Domicilio_Depto";
+                dgListado.Columns[11].Name = "E-Mail";
+                dgListado.Columns[11].DataPropertyName = "Mail";
+                dgListado.Columns[11].Width = 200;
+                dgListado.Columns[12].Name = "Baja";
+                dgListado.Columns[12].DataPropertyName = "BajaEstado";
+
+                //Agrego la colección a la grilla.
+                dgListado.DataSource = lstClientes;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private Dictionary<string, object> ObtenerFiltros()
+        {
+            Dictionary<string, object> lstFiltros = new Dictionary<string, object>();
+
+            if (!string.IsNullOrEmpty(txtFiltroNombre.Text))
+            {
+                lstFiltros.Add("Nombre", txtFiltroNombre.Text);
+            }
+
+            if (!string.IsNullOrEmpty(txtFiltroApellido.Text))
+            {
+                lstFiltros.Add("Apellido", txtFiltroApellido.Text);
+            }
+
+            if (!string.IsNullOrEmpty(txtMail.Text))
+            {
+                lstFiltros.Add("Mail", txtMail.Text);
+            }
+
+            if (cmbFiltroPais.SelectedValue != null && Convert.ToInt32(cmbFiltroPais.SelectedValue) > 0)
+            {
+                lstFiltros.Add("Pais_Codigo", Convert.ToInt32(cmbFiltroPais.SelectedValue));
+            }
+
+            if (cmbTipoDocumento.SelectedValue != null && Convert.ToInt32(cmbTipoDocumento.SelectedValue) > 0)
+            {
+                lstFiltros.Add("Tipo_Doc", Convert.ToInt32(cmbTipoDocumento.SelectedValue));
+            }
+
+            if (!string.IsNullOrEmpty(numNroDocumento.Text))
+            {
+                lstFiltros.Add("Nro_Documento", Convert.ToInt32(numNroDocumento.Text));
+            }
+
+            if (rbHabilitados.Checked)
+            {
+                lstFiltros.Add("Baja", 0);
+            }
+            else if (rbNoHabilitados.Checked)
+            {
+                lstFiltros.Add("Baja", 1);
+            }
+
+
+            return lstFiltros;
+        }
+
         private void LimpiarDatos()
         {
             try
             {
                 dgListado.DataSource = null;
+                txtFiltroApellido.Text = string.Empty;
+                txtFiltroNombre.Text = string.Empty;
+                txtMail.Text = string.Empty;
+                numNroDocumento.Text = string.Empty;
+                cmbFiltroPais.SelectedValue = -1;
+                cmbTipoDocumento.SelectedValue = -1;
+                rbTodos.Checked = true;
+
+                if (dgListado.Rows.Count < 1)
+                {
+                    btnEliminar.Enabled = false;
+                    btnModificar.Enabled = false;
+                }
             }
             catch (Exception ex)
             {
@@ -48,10 +181,10 @@ namespace PagoElectronico.ABM_Cliente
 
         private void AgregarRegistro()
         {
-
             try
             {
                 ClienteEdicion clienteEdicion = new ClienteEdicion();
+                clienteEdicion.Padre = this;
                 clienteEdicion.ShowDialog(this);
             }
             catch (Exception ex)
@@ -70,16 +203,18 @@ namespace PagoElectronico.ABM_Cliente
                     //Edición
                     Cliente miCliente = new Cliente();
                     DataGridViewRow miFilaSeleccionada = dgListado.SelectedRows[0];
-                    miCliente = ObtenerClienteEdicion(miFilaSeleccionada);
+                    int codigoCliente = Convert.ToInt32(miFilaSeleccionada.Cells[0].Value);
+                    miCliente = lstClientes.Find(x => x.Codigo == codigoCliente);
                     miClienteEdicion = new ClienteEdicion(miCliente);
+                    miClienteEdicion.Padre = this;
                     miClienteEdicion.Cliente = miCliente;
                 }
                 else
-                { 
+                {
                     //Alta
                     miClienteEdicion = new ClienteEdicion();
                 }
-                
+
                 miClienteEdicion.ShowDialog(this);
             }
             catch (Exception ex)
@@ -88,31 +223,24 @@ namespace PagoElectronico.ABM_Cliente
             }
         }
 
-        private Cliente ObtenerClienteEdicion(DataGridViewRow miFilaSeleccionada)
+        private void EliminarRegistro()
         {
             try
             {
                 Cliente miCliente = new Cliente();
-                miCliente.Nombre =  Convert.ToString(miFilaSeleccionada.Cells["Nombre"].Value);
-                miCliente.Apellido = Convert.ToString(miFilaSeleccionada.Cells["Apellido"].Value);
-                miCliente.Tipo_Doc_Codigo = Convert.ToInt32(miFilaSeleccionada.Cells["Tipo_Doc_Codigo"].Value);
-                miCliente.Tipo_Doc_Desc = Convert.ToString(miFilaSeleccionada.Cells["Tipo_Doc_Desc"].Value);
-                miCliente.Tipo_Doc_Codigo = Convert.ToInt32(miFilaSeleccionada.Cells["Tipo_Doc_Codigo"].Value);
-                miCliente.Nro_Documento = Convert.ToInt32(miFilaSeleccionada.Cells["Nro_Documento"].Value);
-                //miCliente.Pais.Pais_Codigo = Convert.ToString(miFilaSeleccionada.Cells["Pais_Codigo"].Value);
-                //miCliente.Pais.Pais_Descipcion = Convert.ToString(miFilaSeleccionada.Cells["Pais_Descipcion"].Value);
-                miCliente.Fecha_Nacimiento = Convert.ToDateTime(miFilaSeleccionada.Cells["Fecha_Nacimiento"].Value);
-                miCliente.Mail = Convert.ToString(miFilaSeleccionada.Cells["Mail"].Value);
-                miCliente.Domicilio_Calle = Convert.ToString(miFilaSeleccionada.Cells["Domicilio_Calle"].Value);
-                miCliente.Domicilio_Depto = Convert.ToString(miFilaSeleccionada.Cells["Domicilio_Depto"].Value);
-                miCliente.Domicilio_Nro = Convert.ToInt32(miFilaSeleccionada.Cells["Domicilio_Nro"].Value);
-                miCliente.Domicilio_Piso = Convert.ToInt32(miFilaSeleccionada.Cells["Domicilio_Piso"].Value);
+                DataGridViewRow miFilaSeleccionada = dgListado.SelectedRows[0];
+                int codigoCliente = Convert.ToInt32(miFilaSeleccionada.Cells[0].Value);
+                miCliente = lstClientes.Find(x => x.Codigo == codigoCliente);
+                miClienteNegocio = new ClienteNegocio();
+                miClienteNegocio.EliminarCliente(codigoCliente);
+                MessageBox.Show(MensajesInfo.InfoClienteEliminado);
+                //Refresco la grilla.
+                CargarGrilla();
 
-                return miCliente;
             }
             catch (Exception ex)
             {
-                throw ex;
+                MessageBox.Show(MensajesError.ErrMensajeBaja);
             }
 
         }
@@ -143,9 +271,12 @@ namespace PagoElectronico.ABM_Cliente
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
+            var resultado = MessageBox.Show(MensajesInfo.InfoConfirmación.Replace("|@|", "este cliente"), "Baja cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+                EliminarRegistro();
         }
 
         #endregion
+
     }
 }

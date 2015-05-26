@@ -7,29 +7,29 @@ namespace PagoElectronico.Entidades.Clases
 {
     public class Pais
     {
-        private int pais_Codigo;
-        public int Pais_Codigo
+        private int codigo;
+        public int Codigo
         {
             get
             {
-                return pais_Codigo;
+                return codigo;
             }
             set
             {
-                pais_Codigo = value;
+                codigo = value;
             }
         }
 
-        private string pais_descripcion;
-        public string Pais_Descipcion
+        private string descripcion;
+        public string Descipcion
         {
             get
             {
-                return pais_descripcion;
+                return descripcion;
             }
             set
             {
-                pais_descripcion = value;
+                descripcion = value;
             }
         }
     }

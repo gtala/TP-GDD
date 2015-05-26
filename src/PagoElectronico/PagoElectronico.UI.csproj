@@ -60,17 +60,17 @@
     <Compile Include="ABM Cliente\ClienteListado.Designer.cs">
       <DependentUpon>ClienteListado.cs</DependentUpon>
     </Compile>
-    <Compile Include="ABM de Usuario\UsuarioEdicion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ABM de Usuario\UsuarioEdicion.Designer.cs">
-      <DependentUpon>UsuarioEdicion.cs</DependentUpon>
-    </Compile>
     <Compile Include="Consulta Saldos\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Consulta Saldos\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesCustomizados\NumericTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlesCustomizados\NumericUpDownCustom.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Depositos\Form1.cs">
       <SubType>Form</SubType>
@@ -84,6 +84,12 @@
     <Compile Include="Facturacion\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormulariosBase\FormularioEdicionBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosBase\FormularioEdicionBase.Designer.cs">
+      <DependentUpon>FormularioEdicionBase.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormulariosBase\FormularioListadoBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MensajesError.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MensajesInfo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MensajesInfo.resx</DependentUpon>
     </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -117,8 +128,8 @@
       <DependentUpon>ClienteListado.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ABM de Usuario\UsuarioEdicion.resx">
-      <DependentUpon>UsuarioEdicion.cs</DependentUpon>
+    <EmbeddedResource Include="FormulariosBase\FormularioEdicionBase.resx">
+      <DependentUpon>FormularioEdicionBase.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormulariosBase\FormularioListadoBase.resx">
@@ -128,6 +139,11 @@
     <EmbeddedResource Include="MensajesError.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MensajesError.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MensajesInfo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MensajesInfo.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
@@ -165,6 +181,8 @@
     <Compile Include="Transferencias\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Util\ManejadorCombos.cs" />
+    <Compile Include="Util\ManejadorValidaciones.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PagoElectronico.Entidades\PagoElectronico.Entidades.csproj">
@@ -178,6 +196,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ABM Cuenta\" />
+    <Folder Include="ABM de Usuario\" />
     <Folder Include="ABM Rol\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

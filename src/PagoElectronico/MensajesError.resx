@@ -126,6 +126,9 @@
   <data name="ErrMensajeBusqueda" xml:space="preserve">
     <value>Ocurrió un error al intentar realizar la búsqueda. Por favor intente nuevamente.</value>
   </data>
+  <data name="ErrMensajeGuardarCliente" xml:space="preserve">
+    <value>Ocurrió un error al intentar guardar el Cliente. Por favor intente nuevamente.</value>
+  </data>
   <data name="ErrMensajeModificación" xml:space="preserve">
     <value>Ocurrió un error al intentar modificar el registro. Por favor intente nuevamente.</value>
   </data>

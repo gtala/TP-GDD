@@ -102,6 +102,13 @@ namespace PagoElectronico.Entidades.Clases
             }
         }
 
+        //Para bindear las grillas. 
+        //No se puede acceder a las propiedades de los campos que son objectos.
+        #region - Pais
+        public int Pais_Codigo { get { return pais.Codigo; } }
+        public string Pais_Descripcion { get { return pais.Descipcion; } }
+        #endregion
+
         private string domicilio_Calle;
         public string Domicilio_Calle
         {
@@ -180,5 +187,28 @@ namespace PagoElectronico.Entidades.Clases
             }
         }
 
+        private bool baja;
+        public bool Baja
+        {
+            get
+            {
+                return baja;
+            }
+            set
+            {
+                baja = value;
+            }
+        }
+
+        /// <summary>
+        /// Muestra el estado en las grillas
+        /// </summary>
+        public string BajaEstado
+        {
+            get
+            {
+                return baja ? "Sí" : "No";
+            }
+        }
     }
 }

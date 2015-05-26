@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using PagoElectronico.Entidades.Clases;
+using PagoElectronico.Datos.Clases;
 
 namespace PagoElectronico.Negocio.Clases
 {
@@ -7,18 +8,36 @@ namespace PagoElectronico.Negocio.Clases
     {
         Datos.Clases.ClienteDatos miClienteDatos;
 
-        public List<Cliente> ObtenerClientes()
+        public List<Cliente> ObtenerClientes(Dictionary<string, object> filtros)
         {
             try
             {
-                miClienteDatos = new PagoElectronico.Datos.Clases.ClienteDatos();
-                return miClienteDatos.ObtenerClientes();
+                miClienteDatos = new ClienteDatos();
+                return miClienteDatos.ObtenerClientes(filtros);
             }
             catch (System.Exception ex)
             {
                 throw ex;
             }
+        }
 
+        public void GuardarCliente(Cliente cliente)
+        {
+            try
+            {
+                miClienteDatos = new ClienteDatos();
+                miClienteDatos.GuardarCliente(cliente);
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void EliminarCliente(int codigoCliente)
+        {
+            miClienteDatos = new ClienteDatos();
+            miClienteDatos.EliminarCliente(codigoCliente);
         }
     }
 }

@@ -15,6 +15,10 @@ C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElec
 C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\bin\Debug\PagoElectronico.Datos.pdb
 C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.FormulariosBase.FormularioListadoBase.resources
 C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.ABM_Cliente.ClienteListado.resources
-C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.ABM_de_Usuario.UsuarioEdicion.resources
 C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.ABM_Cliente.ClienteEdicion.resources
 C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.MensajesError.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.FormulariosBase.FormularioEdicionBase.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.MensajesInfo.resources
+C:\Users\Guillermo\Desktop\Trabajo Practico\TP-GDD\src\PagoElectronico\bin\Debug\PagoElectronico.UI.exe.config
+C:\Users\Guillermo\Desktop\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.UI.exe
+C:\Users\Guillermo\Desktop\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.UI.pdb

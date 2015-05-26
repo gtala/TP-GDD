@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Clases\ClienteNegocio.cs" />
     <Compile Include="Clases\PaisNegocio.cs" />
+    <Compile Include="Helpers\UtilNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

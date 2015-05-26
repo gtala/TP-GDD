@@ -88,6 +88,15 @@ namespace PagoElectronico {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ocurrió un error al intentar guardar el Cliente. Por favor intente nuevamente..
+        /// </summary>
+        internal static string ErrMensajeGuardarCliente {
+            get {
+                return ResourceManager.GetString("ErrMensajeGuardarCliente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ocurrió un error al intentar modificar el registro. Por favor intente nuevamente..
         /// </summary>
         internal static string ErrMensajeModificación {

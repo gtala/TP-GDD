@@ -13,6 +13,9 @@ C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElec
 C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.UI.pdb
 C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\bin\Release\PagoElectronico.Datos.dll
 C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\bin\Release\PagoElectronico.Datos.pdb
-C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.ABM_de_Usuario.UsuarioListado.resources
 C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.ABM_Cliente.ClienteListado.resources
 C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.FormulariosBase.FormularioListadoBase.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.ABM_Cliente.ClienteEdicion.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.MensajesError.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.FormulariosBase.FormularioEdicionBase.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.MensajesInfo.resources
