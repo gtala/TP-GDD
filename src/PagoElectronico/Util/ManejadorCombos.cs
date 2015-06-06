@@ -50,5 +50,40 @@ namespace PagoElectronico.Util
                 throw ex;
             }
         }
+
+        public static void CargarComboRolesUsuario(ref ComboBox combo, List<Rol> roles)
+        {
+            try
+            {
+                List<Rol> lstRoles = new List<Rol>();
+                lstRoles = roles;
+                lstRoles.Insert(0, new Rol() { Codigo = -1, Nombre = SELECCIONE });
+                combo.DataSource = lstRoles;
+                combo.ValueMember = "Codigo";
+                combo.DisplayMember = "Nombre";
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public static void CargarCheckListFuncionalidades(ref CheckedListBox chk)
+        {
+            FuncionalidadNegocio miFuncionalidadNegocio = new FuncionalidadNegocio();
+            List<Funcionalidad> lstFuncionalidades = new List<Funcionalidad>();
+            lstFuncionalidades = miFuncionalidadNegocio.ObtenerFuncionalidades();
+
+            ((ListBox)chk).DataSource = lstFuncionalidades;
+            ((ListBox)chk).DisplayMember = "Nombre";
+            ((ListBox)chk).ValueMember = "Codigo";
+        }
+
+        public static void CargarListBoxRoles(ref ListBox lst, List<Rol> rolesDataSource)
+        {
+            lst.DataSource = rolesDataSource;
+            lst.DisplayMember = "Nombre";
+            lst.ValueMember = "Codigo";
+        }
     }
 }

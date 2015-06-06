@@ -24,6 +24,56 @@ namespace PagoElectronico.Util
             errProvider = paramErrorProvider;
         }
 
+        public void CrearValidacionesCheckListBox(ref CheckedListBox chkLst, string paramMsjError)
+        {
+            dicMsjError.Add(chkLst.Name, paramMsjError);
+            chkLst.Validating += new CancelEventHandler(chkLst_Validating);
+            chkLst.Validated += new EventHandler(chkLst_Validated);
+        }
+
+        void chkLst_Validated(object sender, EventArgs e)
+        {
+            this.errProvider.SetError(((CheckedListBox)sender), "");
+        }
+
+        void chkLst_Validating(object sender, CancelEventArgs e)
+        {
+            CheckedListBox miLst = (CheckedListBox)sender;
+            string msjError = dicMsjError.First(item => item.Key == miLst.Name).Value;
+
+            if (miLst.CheckedItems.Count == 0)
+            {
+                e.Cancel = true;
+                miLst.Focus();
+                this.errProvider.SetError(miLst, msjError);
+            }
+        }
+
+        public void CrearValidacionesListBox(ref ListBox lst, string paramMsjError)
+        {
+            dicMsjError.Add(lst.Name, paramMsjError);
+            lst.Validating += new CancelEventHandler(lst_Validating);
+            lst.Validated += new EventHandler(lst_Validated);
+        }
+
+        void lst_Validated(object sender, EventArgs e)
+        {
+            this.errProvider.SetError(((ListBox)sender), "");
+        }
+
+        void lst_Validating(object sender, CancelEventArgs e)
+        {
+            ListBox miLst = (ListBox)sender;
+            string msjError = dicMsjError.First(item => item.Key == miLst.Name).Value;
+
+            if (miLst == null || miLst.Items.Count == 0)
+            {
+                e.Cancel = true;
+                miLst.Focus();
+                this.errProvider.SetError(miLst, msjError);
+            }
+        }
+
         public void CrearValidacionesComboBox(ref ComboBox cmb, string paramMsjError)
         {
             dicMsjError.Add(cmb.Name, paramMsjError);

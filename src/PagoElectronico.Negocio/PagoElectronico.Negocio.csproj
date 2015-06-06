@@ -46,7 +46,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\ClienteNegocio.cs" />
+    <Compile Include="Clases\CuentaNegocio.cs" />
+    <Compile Include="Clases\FuncionalidadNegocio.cs" />
     <Compile Include="Clases\PaisNegocio.cs" />
+    <Compile Include="Clases\RolNegocio.cs" />
+    <Compile Include="Clases\UsuarioNegocio.cs" />
     <Compile Include="Helpers\UtilNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

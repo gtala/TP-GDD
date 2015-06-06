@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace PagoElectronico.Login
+namespace PagoElectronico.ABM_Cuenta
 {
-    public partial class Form1 : Form
+    public partial class CuentaEdicion : FormulariosBase.FormularioEdicionBase
     {
-        public Form1()
+        public CuentaEdicion()
         {
             InitializeComponent();
         }

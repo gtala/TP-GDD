@@ -88,6 +88,15 @@ namespace PagoElectronico {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ¡ |@| fue dado de baja correctamente!..
+        /// </summary>
+        internal static string InfoEliminado {
+            get {
+                return ResourceManager.GetString("InfoEliminado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to El e - mail ingresado no es válido. Intente con el siguiente formato: ejemplo@compania.com.
         /// </summary>
         internal static string infoMailInvalido {

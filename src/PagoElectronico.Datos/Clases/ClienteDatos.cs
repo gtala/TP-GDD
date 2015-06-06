@@ -4,9 +4,7 @@ using System.Linq;
 using System.Data;
 using PagoElectronico.Datos.Helpers;
 using PagoElectronico.Entidades.Clases;
-using System.Xml;
 using System.Xml.Linq;
-using System.Data.SqlClient;
 
 namespace PagoElectronico.Datos.Clases
 {
@@ -36,7 +34,52 @@ namespace PagoElectronico.Datos.Clases
             }
         }
 
-        
+        public void GuardarCliente(Cliente cliente)
+        {
+            try
+            {
+                XDocument clienteXml = ObtenerClienteXml(cliente);
+                miConexionSql = new Conexion();
+                miConexionSql.EjecutarProcedure("@XmlCliente", "Sp_GuardarCliente", clienteXml);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void EliminarCliente(int codigoCliente)
+        {
+            try
+            {
+                miConexionSql = new Conexion();
+                miConexionSql.EjecutarProcedure("Sp_EliminarCliente", "@Codigo", codigoCliente);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private XDocument ObtenerClienteXml(Cliente cliente)
+        {
+            XDocument clienteXml = new XDocument(
+                new XElement("Cliente",
+                new XElement("Codigo", cliente.Codigo),
+                new XElement("Nombre", cliente.Nombre),
+                new XElement("Apellido", cliente.Apellido),
+                new XElement("Tipo_Doc_Codigo", cliente.Tipo_Doc_Codigo),
+                new XElement("Nro_Documento", cliente.Nro_Documento),
+                new XElement("Pais_Codigo", cliente.Pais.Codigo),
+                new XElement("Domicilio_Calle", cliente.Domicilio_Calle),
+                new XElement("Domicilio_Nro", cliente.Domicilio_Nro),
+                new XElement("Domicilio_Piso", cliente.Domicilio_Piso),
+                new XElement("Domicilio_Depto", cliente.Domicilio_Depto),
+                new XElement("Fecha_Nacimiento", Convert.ToString(cliente.Fecha_Nacimiento)),
+                new XElement("Mail", cliente.Mail),
+                new XElement("Baja", cliente.Baja)));
+            return clienteXml;
+        }
 
         private List<Cliente> MapearDataTableLista(DataTable dtClientes)
         {
@@ -65,53 +108,6 @@ namespace PagoElectronico.Datos.Clases
                 }).ToList();
 
                 return lstClientes;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        public void GuardarCliente(Cliente cliente)
-        {
-            try
-            {
-                XDocument clienteXml = ObtenerClienteXml(cliente);
-                miConexionSql = new Conexion();
-                miConexionSql.EjecutarProcedure("@XmlCliente", "Sp_GuardarCliente", clienteXml);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        private XDocument ObtenerClienteXml(Cliente cliente)
-        {
-            XDocument clienteXml = new XDocument(
-                new XElement("Cliente",
-                new XElement("Codigo", cliente.Codigo),
-                new XElement("Nombre", cliente.Nombre),
-                new XElement("Apellido", cliente.Apellido),
-                new XElement("Tipo_Doc_Codigo", cliente.Tipo_Doc_Codigo),
-                new XElement("Nro_Documento", cliente.Nro_Documento),
-                new XElement("Pais_Codigo", cliente.Pais.Codigo),
-                new XElement("Domicilio_Calle", cliente.Domicilio_Calle),
-                new XElement("Domicilio_Nro", cliente.Domicilio_Nro),
-                new XElement("Domicilio_Piso", cliente.Domicilio_Piso),
-                new XElement("Domicilio_Depto", cliente.Domicilio_Depto),
-                new XElement("Fecha_Nacimiento", Convert.ToString(cliente.Fecha_Nacimiento)),
-                new XElement("Mail", cliente.Mail),
-                new XElement("Baja", cliente.Baja)));
-            return clienteXml;
-        }
-
-        public void EliminarCliente(int codigoCliente)
-        {
-            try
-            {
-                miConexionSql = new Conexion();
-                miConexionSql.EjecutarProcedure("Sp_EliminarCliente", "@Codigo", codigoCliente);
             }
             catch (Exception ex)
             {

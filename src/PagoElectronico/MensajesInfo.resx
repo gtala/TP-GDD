@@ -129,4 +129,7 @@
   <data name="infoMailInvalido" xml:space="preserve">
     <value>El e - mail ingresado no es válido. Intente con el siguiente formato: ejemplo@compania.com</value>
   </data>
+  <data name="InfoEliminado" xml:space="preserve">
+    <value>¡ |@| fue dado de baja correctamente!.</value>
+  </data>
 </root>

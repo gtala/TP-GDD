@@ -4,7 +4,6 @@ using System.Windows.Forms;
 using PagoElectronico.Entidades.Clases;
 using PagoElectronico.FormulariosBase;
 using PagoElectronico.Negocio.Clases;
-using System.ComponentModel;
 using PagoElectronico.Util;
 
 namespace PagoElectronico.ABM_Cliente

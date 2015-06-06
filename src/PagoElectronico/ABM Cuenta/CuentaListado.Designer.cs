@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            //Implemento el del padre.
-            base.InitializeComponent();
-            base.Name = "CuentaListado";
-            base.Text = "Listado de Cuentas";
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Text = "CuentaListado";
         }
 
         #endregion

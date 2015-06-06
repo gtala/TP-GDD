@@ -181,5 +181,34 @@ namespace PagoElectronico.Datos.Helpers
                 throw ex;
             }
         }
+
+        public void EjecutarProcedure(string nombreStoreProcedure, string nombreParametro, string parametroValor)
+        {
+            try
+            {
+                string cadenaConexion = ConfigurationManager.ConnectionStrings["ConexionPagoElectronico"].ConnectionString;
+                using (SqlConnection con = new SqlConnection(cadenaConexion))
+                {
+                    using (SqlCommand cmd = new SqlCommand(ObjetoConEsquema(nombreStoreProcedure)))
+                    {
+                        cmd.Connection = con;
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add(new SqlParameter()
+                        {
+                            ParameterName = nombreParametro,
+                            SqlDbType = SqlDbType.VarChar,
+                            Value = parametroValor
+                        });
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

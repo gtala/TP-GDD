@@ -1,6 +1,6 @@
-﻿namespace PagoElectronico.Login
+﻿namespace PagoElectronico
 {
-    partial class Form1
+    partial class Prueba
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.gbFiltros.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // Prueba
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(1090, 469);
+            this.Name = "Prueba";
+            this.Text = "Prueba";
+            this.gbFiltros.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

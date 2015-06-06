@@ -28,143 +28,196 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.crearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.crearToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.crearToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.transferenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.menuStrip1.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
+            this.tsMenu = new System.Windows.Forms.ToolStrip();
+            this.btnSeguridad = new System.Windows.Forms.ToolStripDropDownButton();
+            this.btnUsuarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnRoles = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnClientes = new System.Windows.Forms.ToolStripButton();
+            this.btnCuentas = new System.Windows.Forms.ToolStripButton();
+            this.btnTransferencias = new System.Windows.Forms.ToolStripButton();
+            this.btnTarjetas = new System.Windows.Forms.ToolStripButton();
+            this.btnDepositos = new System.Windows.Forms.ToolStripButton();
+            this.btnRetiro = new System.Windows.Forms.ToolStripButton();
+            this.btnFacturacion = new System.Windows.Forms.ToolStripButton();
+            this.btnSaldo = new System.Windows.Forms.ToolStripButton();
+            this.btnEstadisticas = new System.Windows.Forms.ToolStripButton();
+            this.btnSalir = new System.Windows.Forms.ToolStripButton();
+            this.tsMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // tsMenu
             // 
-            this.menuStrip1.AllowDrop = true;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuToolStripMenuItem,
-            this.opcionesToolStripMenuItem,
-            this.transferenciasToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(653, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.tsMenu.ImageScalingSize = new System.Drawing.Size(48, 48);
+            this.tsMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnSeguridad,
+            this.btnClientes,
+            this.btnCuentas,
+            this.btnTransferencias,
+            this.btnTarjetas,
+            this.btnDepositos,
+            this.btnRetiro,
+            this.btnFacturacion,
+            this.btnSaldo,
+            this.btnEstadisticas,
+            this.btnSalir});
+            this.tsMenu.Location = new System.Drawing.Point(0, 0);
+            this.tsMenu.Name = "tsMenu";
+            this.tsMenu.Size = new System.Drawing.Size(1243, 55);
+            this.tsMenu.TabIndex = 0;
+            this.tsMenu.Text = "Menú";
             // 
-            // menuToolStripMenuItem
+            // btnSeguridad
             // 
-            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rolesToolStripMenuItem,
-            this.usuariosToolStripMenuItem});
-            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
-            this.menuToolStripMenuItem.Text = "Seguridad";
+            this.btnSeguridad.AccessibleName = "Seguridad";
+            this.btnSeguridad.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnUsuarios,
+            this.btnRoles});
+            this.btnSeguridad.Image = ((System.Drawing.Image)(resources.GetObject("btnSeguridad.Image")));
+            this.btnSeguridad.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSeguridad.Name = "btnSeguridad";
+            this.btnSeguridad.Size = new System.Drawing.Size(121, 52);
+            this.btnSeguridad.Text = "Seguridad";
+            this.btnSeguridad.Visible = false;
             // 
-            // rolesToolStripMenuItem
+            // btnUsuarios
             // 
-            this.rolesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearToolStripMenuItem,
-            this.editarToolStripMenuItem,
-            this.buscarToolStripMenuItem});
-            this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
-            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
-            this.rolesToolStripMenuItem.Text = "Roles";
+            this.btnUsuarios.AccessibleName = "ABM de Usuario";
+            this.btnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Image")));
+            this.btnUsuarios.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(184, 54);
+            this.btnUsuarios.Text = "Usuarios";
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
-            // crearToolStripMenuItem
+            // btnRoles
             // 
-            this.crearToolStripMenuItem.Name = "crearToolStripMenuItem";
-            this.crearToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
-            this.crearToolStripMenuItem.Text = "Crear";
-            this.crearToolStripMenuItem.Click += new System.EventHandler(this.crearToolStripMenuItem_Click);
+            this.btnRoles.AccessibleName = "ABM de Rol";
+            this.btnRoles.Image = ((System.Drawing.Image)(resources.GetObject("btnRoles.Image")));
+            this.btnRoles.Name = "btnRoles";
+            this.btnRoles.Size = new System.Drawing.Size(184, 54);
+            this.btnRoles.Text = "Roles";
+            this.btnRoles.Click += new System.EventHandler(this.btnRoles_Click);
             // 
-            // editarToolStripMenuItem
+            // btnClientes
             // 
-            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
-            this.editarToolStripMenuItem.Text = "Editar";
+            this.btnClientes.AccessibleName = "ABM de Cliente";
+            this.btnClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnClientes.Image")));
+            this.btnClientes.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(101, 52);
+            this.btnClientes.Text = "Clientes";
+            this.btnClientes.Visible = false;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
-            // buscarToolStripMenuItem
+            // btnCuentas
             // 
-            this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
-            this.buscarToolStripMenuItem.Text = "Buscar";
+            this.btnCuentas.AccessibleName = "ABM de Cuenta";
+            this.btnCuentas.Image = ((System.Drawing.Image)(resources.GetObject("btnCuentas.Image")));
+            this.btnCuentas.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCuentas.Name = "btnCuentas";
+            this.btnCuentas.Size = new System.Drawing.Size(102, 52);
+            this.btnCuentas.Text = "Cuentas";
+            this.btnCuentas.Visible = false;
+            this.btnCuentas.Click += new System.EventHandler(this.btnCuentas_Click);
             // 
-            // usuariosToolStripMenuItem
+            // btnTransferencias
             // 
-            this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearToolStripMenuItem1,
-            this.editarToolStripMenuItem1,
-            this.buscarToolStripMenuItem1});
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.btnTransferencias.AccessibleName = "Transferencias entre cuentas";
+            this.btnTransferencias.Image = ((System.Drawing.Image)(resources.GetObject("btnTransferencias.Image")));
+            this.btnTransferencias.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnTransferencias.Name = "btnTransferencias";
+            this.btnTransferencias.Size = new System.Drawing.Size(135, 52);
+            this.btnTransferencias.Text = "Transferencias";
+            this.btnTransferencias.Visible = false;
+            this.btnTransferencias.Click += new System.EventHandler(this.btnTransferencia_Click);
             // 
-            // crearToolStripMenuItem1
+            // btnTarjetas
             // 
-            this.crearToolStripMenuItem1.Name = "crearToolStripMenuItem1";
-            this.crearToolStripMenuItem1.Size = new System.Drawing.Size(109, 22);
-            this.crearToolStripMenuItem1.Text = "Crear";
+            this.btnTarjetas.Image = ((System.Drawing.Image)(resources.GetObject("btnTarjetas.Image")));
+            this.btnTarjetas.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnTarjetas.Name = "btnTarjetas";
+            this.btnTarjetas.Size = new System.Drawing.Size(100, 52);
+            this.btnTarjetas.Text = "Tarjetas";
+            this.btnTarjetas.Visible = false;
+            this.btnTarjetas.Click += new System.EventHandler(this.btnTarjetas_Click);
             // 
-            // editarToolStripMenuItem1
+            // btnDepositos
             // 
-            this.editarToolStripMenuItem1.Name = "editarToolStripMenuItem1";
-            this.editarToolStripMenuItem1.Size = new System.Drawing.Size(109, 22);
-            this.editarToolStripMenuItem1.Text = "Editar";
+            this.btnDepositos.AccessibleName = "Depósitos";
+            this.btnDepositos.Image = ((System.Drawing.Image)(resources.GetObject("btnDepositos.Image")));
+            this.btnDepositos.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnDepositos.Name = "btnDepositos";
+            this.btnDepositos.Size = new System.Drawing.Size(111, 52);
+            this.btnDepositos.Text = "Depositos";
+            this.btnDepositos.Visible = false;
+            this.btnDepositos.Click += new System.EventHandler(this.btnDepositos_Click);
             // 
-            // buscarToolStripMenuItem1
+            // btnRetiro
             // 
-            this.buscarToolStripMenuItem1.Name = "buscarToolStripMenuItem1";
-            this.buscarToolStripMenuItem1.Size = new System.Drawing.Size(109, 22);
-            this.buscarToolStripMenuItem1.Text = "Buscar";
+            this.btnRetiro.AccessibleName = "Retiro de Efectivo";
+            this.btnRetiro.Image = ((System.Drawing.Image)(resources.GetObject("btnRetiro.Image")));
+            this.btnRetiro.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnRetiro.Name = "btnRetiro";
+            this.btnRetiro.Size = new System.Drawing.Size(90, 52);
+            this.btnRetiro.Text = "Retiro";
+            this.btnRetiro.Visible = false;
+            this.btnRetiro.Click += new System.EventHandler(this.btnRetiro_Click);
             // 
-            // opcionesToolStripMenuItem
+            // btnFacturacion
             // 
-            this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearToolStripMenuItem2});
-            this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.opcionesToolStripMenuItem.Text = "Clientes";
+            this.btnFacturacion.AccessibleName = "Facturación de Costos";
+            this.btnFacturacion.Image = ((System.Drawing.Image)(resources.GetObject("btnFacturacion.Image")));
+            this.btnFacturacion.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnFacturacion.Name = "btnFacturacion";
+            this.btnFacturacion.Size = new System.Drawing.Size(121, 52);
+            this.btnFacturacion.Text = "Facturación";
+            this.btnFacturacion.Visible = false;
+            this.btnFacturacion.Click += new System.EventHandler(this.btnFacturacion_Click);
             // 
-            // crearToolStripMenuItem2
+            // btnSaldo
             // 
-            this.crearToolStripMenuItem2.Name = "crearToolStripMenuItem2";
-            this.crearToolStripMenuItem2.Size = new System.Drawing.Size(102, 22);
-            this.crearToolStripMenuItem2.Text = "Crear";
+            this.btnSaldo.AccessibleName = "Consulta de saldos";
+            this.btnSaldo.Image = ((System.Drawing.Image)(resources.GetObject("btnSaldo.Image")));
+            this.btnSaldo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSaldo.Name = "btnSaldo";
+            this.btnSaldo.Size = new System.Drawing.Size(88, 52);
+            this.btnSaldo.Text = "Saldo";
+            this.btnSaldo.Visible = false;
+            this.btnSaldo.Click += new System.EventHandler(this.btnSaldo_Click);
             // 
-            // transferenciasToolStripMenuItem
+            // btnEstadisticas
             // 
-            this.transferenciasToolStripMenuItem.Name = "transferenciasToolStripMenuItem";
-            this.transferenciasToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
-            this.transferenciasToolStripMenuItem.Text = "Transferencias";
+            this.btnEstadisticas.AccessibleName = "Listado Estadístico";
+            this.btnEstadisticas.Image = ((System.Drawing.Image)(resources.GetObject("btnEstadisticas.Image")));
+            this.btnEstadisticas.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEstadisticas.Name = "btnEstadisticas";
+            this.btnEstadisticas.Size = new System.Drawing.Size(119, 52);
+            this.btnEstadisticas.Text = "Estadisticas";
+            this.btnEstadisticas.Visible = false;
+            this.btnEstadisticas.Click += new System.EventHandler(this.btnEstadisticas_Click);
             // 
-            // panel1
+            // btnSalir
             // 
-            this.panel1.AllowDrop = true;
-            this.panel1.AutoSize = true;
-            this.panel1.Location = new System.Drawing.Point(0, 27);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(662, 312);
-            this.panel1.TabIndex = 1;
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(81, 52);
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 343);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1243, 300);
+            this.Controls.Add(this.tsMenu);
             this.Name = "Principal";
-            this.Text = "PagoElectronico";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Text = "Pago Electronico";
+            this.Load += new System.EventHandler(this.Principal_Load);
+            this.tsMenu.ResumeLayout(false);
+            this.tsMenu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,20 +225,21 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem crearToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem crearToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem transferenciasToolStripMenuItem;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ToolStripMenuItem crearToolStripMenuItem2;
+        public System.Windows.Forms.ToolStrip tsMenu;
+        private System.Windows.Forms.ToolStripButton btnTransferencias;
+        private System.Windows.Forms.ToolStripButton btnClientes;
+        private System.Windows.Forms.ToolStripButton btnCuentas;
+        private System.Windows.Forms.ToolStripButton btnTarjetas;
+        private System.Windows.Forms.ToolStripDropDownButton btnSeguridad;
+        private System.Windows.Forms.ToolStripMenuItem btnUsuarios;
+        private System.Windows.Forms.ToolStripMenuItem btnRoles;
+        private System.Windows.Forms.ToolStripButton btnDepositos;
+        private System.Windows.Forms.ToolStripButton btnRetiro;
+        private System.Windows.Forms.ToolStripButton btnFacturacion;
+        private System.Windows.Forms.ToolStripButton btnSaldo;
+        private System.Windows.Forms.ToolStripButton btnEstadisticas;
+        private System.Windows.Forms.ToolStripButton btnSalir;
+
     }
 }
 

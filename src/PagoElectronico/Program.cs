@@ -16,7 +16,8 @@ namespace PagoElectronico
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //GDT: Indica cual va a ser el primer formulario que se va a abrir.
-            Application.Run(new PagoElectronico.ABM_Cliente.ClienteListado());
+            Application.Run(new Login.Login());
+          // Application.Run(new Principal());
         }
     }
 }

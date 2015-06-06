@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 using PagoElectronico.Entidades.Clases;
 using PagoElectronico.Negocio.Clases;
 using PagoElectronico.Util;
-using System.Data.SqlClient;
 
 namespace PagoElectronico.ABM_Cliente
 {
