@@ -16,6 +16,7 @@ namespace PagoElectronico.Entidades.Clases
         private string username;
         private string password;
         private List<Rol> roles;
+        private Rol rolActivo;
         private DateTime fechaCreacion;
         private DateTime fechaUltimaModificacion;
         private string preguntaSecreta;
@@ -56,6 +57,18 @@ namespace PagoElectronico.Entidades.Clases
             set
             {
                 roles = value;
+            }
+        }
+
+        public Rol RolActivo
+        {
+            get
+            {
+                return rolActivo;
+            }
+            set
+            {
+                rolActivo = value;
             }
         }
 

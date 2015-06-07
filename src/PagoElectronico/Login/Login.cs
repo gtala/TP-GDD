@@ -79,7 +79,8 @@ namespace PagoElectronico.Login
                     }
                     else
                     {
-                        MostrarMenu(usuarioLogueado.Roles[0]);
+                        usuarioLogueado.RolActivo = usuarioLogueado.Roles[0];
+                        MostrarMenu(usuarioLogueado);
                     }
                 }
                 else
@@ -127,9 +128,9 @@ namespace PagoElectronico.Login
             miUsuarioNegocio.GuardarUsuario(usuarioLogueado);
         }
 
-        private void MostrarMenu(Rol rol)
+        private void MostrarMenu(Usuario usuario)
         {
-            Principal formPrincipal = new Principal(this,rol.Funcionalidades);
+            Principal formPrincipal = new Principal(this, usuario);
             formPrincipal.Show();
         }
 
@@ -153,7 +154,8 @@ namespace PagoElectronico.Login
                 {
                     if((int)cmbRoles.SelectedValue == rol.Codigo )
                     {
-                        MostrarMenu(rol);
+                        usuarioLogueado.RolActivo = rol;
+                        MostrarMenu(usuarioLogueado);
                         break;
                     }
             		 

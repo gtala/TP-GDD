@@ -12,16 +12,16 @@ namespace PagoElectronico
 {
     public partial class Principal : Form
     {
-        private List<Funcionalidad> funcionalidades;
-        public List<Funcionalidad> Funcionalidades
+        private Usuario usuarioActivo;
+        public Usuario UsuarioActivo
         {
             get
             {
-                return funcionalidades;
+                return usuarioActivo;
             }
             set
             {
-                funcionalidades = value;
+                usuarioActivo = value;
             }
         }
 
@@ -31,15 +31,15 @@ namespace PagoElectronico
             InitializeComponent();
         }
 
-        public Principal(Form login, List<Funcionalidad> funcionalidades)
+        public Principal(Form login, Usuario usuarioLogin)
         {
             InitializeComponent();
             login.Visible = false;
-            this.Funcionalidades = funcionalidades;
+            usuarioActivo = usuarioLogin;
 
             foreach (ToolStripItem item in tsMenu.Items)
             {
-                foreach (Funcionalidad funcionalidad in Funcionalidades)
+                foreach (Funcionalidad funcionalidad in usuarioActivo.RolActivo.Funcionalidades)
                 {
                     if (item.AccessibleName != null && (funcionalidad.Nombre.ToUpper().Trim() == item.AccessibleName.ToUpper().Trim()))
                     {
