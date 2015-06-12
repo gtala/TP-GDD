@@ -48,9 +48,12 @@
   <ItemGroup>
     <Compile Include="Clases\ClienteDatos.cs" />
     <Compile Include="Clases\CuentaDatos.cs" />
+    <Compile Include="Clases\DepositoDatos.cs" />
     <Compile Include="Clases\FuncionalidadDatos.cs" />
+    <Compile Include="Clases\MonedaDatos.cs" />
     <Compile Include="Clases\PaisDatos.cs" />
     <Compile Include="Clases\RolDatos.cs" />
+    <Compile Include="Clases\TransferenciaDatos.cs" />
     <Compile Include="Clases\UsuarioDatos.cs" />
     <Compile Include="Helpers\Conexion.cs" />
     <Compile Include="Helpers\UtilDatos.cs" />

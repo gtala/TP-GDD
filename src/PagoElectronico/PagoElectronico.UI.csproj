@@ -60,6 +60,12 @@
     <Compile Include="ABM Cliente\ClienteListado.Designer.cs">
       <DependentUpon>ClienteListado.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlesCustomizados\ucGrilla.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesCustomizados\ucGrilla.Designer.cs">
+      <DependentUpon>ucGrilla.cs</DependentUpon>
+    </Compile>
     <Compile Include="ABM Cuenta\CuentaEdicion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,17 +114,23 @@
     <Compile Include="ControlesCustomizados\NumericUpDownCustom.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Depositos\Form1.cs">
+    <Compile Include="Depositos\Depositos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Depositos\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Depositos\Depositos.Designer.cs">
+      <DependentUpon>Depositos.cs</DependentUpon>
     </Compile>
     <Compile Include="Facturacion\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Facturacion\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosBase\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosBase\FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
     </Compile>
     <Compile Include="FormulariosBase\FormularioEdicionBase.cs">
       <SubType>Form</SubType>
@@ -170,6 +182,14 @@
       <DependentUpon>ClienteListado.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="ABM Cuenta\CuentaEdicion.resx">
+      <DependentUpon>CuentaEdicion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABM Cuenta\CuentaListado.resx">
+      <DependentUpon>CuentaListado.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="ABM de Usuario\UsuarioEdicion.resx">
       <DependentUpon>UsuarioEdicion.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -184,6 +204,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ABM Rol\RolListado.resx">
       <DependentUpon>RolListado.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesCustomizados\ucGrilla.resx">
+      <DependentUpon>ucGrilla.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Depositos\Depositos.resx">
+      <DependentUpon>Depositos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulariosBase\FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormulariosBase\FormularioEdicionBase.resx">
@@ -217,16 +249,8 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Prueba.resx">
-      <DependentUpon>Prueba.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Prueba1.resx">
-      <DependentUpon>Prueba1.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Transferencias\TransferenciaFormulario.resx">
-      <DependentUpon>TransferenciaFormulario.cs</DependentUpon>
+    <EmbeddedResource Include="Transferencias\Transferencias.resx">
+      <DependentUpon>Transferencias.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -244,30 +268,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Prueba.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Prueba.Designer.cs">
-      <DependentUpon>Prueba.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Prueba1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Prueba1.Designer.cs">
-      <DependentUpon>Prueba1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Retiros\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Retiros\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transferencias\TransferenciaFormulario.cs">
+    <Compile Include="Transferencias\Transferencias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Transferencias\TransferenciaFormulario.Designer.cs">
-      <DependentUpon>TransferenciaFormulario.cs</DependentUpon>
+    <Compile Include="Transferencias\Transferencias.Designer.cs">
+      <DependentUpon>Transferencias.cs</DependentUpon>
     </Compile>
+    <Compile Include="Util\Encriptador.cs" />
     <Compile Include="Util\ManejadorCombos.cs" />
     <Compile Include="Util\ManejadorValidaciones.cs" />
   </ItemGroup>

@@ -24,6 +24,9 @@ C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElec
 C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.ABM_Rol.RolEdicion.resources
 C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.ABM_Rol.RolListado.resources
 C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.Login.Login.resources
-C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.Prueba.resources
-C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.Prueba1.resources
-C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.Transferencias.TransferenciaFormulario.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.FormulariosBase.FormBase.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.Transferencias.Transferencias.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.ControlesCustomizados.ucGrilla.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.Depositos.Depositos.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.ABM_Cuenta.CuentaListado.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Release\PagoElectronico.ABM_Cuenta.CuentaEdicion.resources

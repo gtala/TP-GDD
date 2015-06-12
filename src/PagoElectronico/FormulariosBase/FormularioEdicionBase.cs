@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace PagoElectronico.FormulariosBase
 {
-    public partial class FormularioEdicionBase : Form
+    public partial class FormularioEdicionBase : FormBase
     {
         
         public FormularioEdicionBase()

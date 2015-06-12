@@ -6,12 +6,13 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using PagoElectronico.FormulariosBase;
 
-namespace PagoElectronico.Transferencias
+namespace PagoElectronico.Depositos
 {
-    public partial class TransferenciaFormulario : Form
+    public partial class Depositos : FormularioEdicionBase
     {
-        public TransferenciaFormulario()
+        public Depositos()
         {
             InitializeComponent();
         }

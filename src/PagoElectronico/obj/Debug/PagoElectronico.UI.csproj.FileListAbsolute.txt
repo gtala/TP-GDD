@@ -22,11 +22,14 @@ C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElec
 C:\Users\Guillermo\Desktop\Trabajo Practico\TP-GDD\src\PagoElectronico\bin\Debug\PagoElectronico.UI.exe.config
 C:\Users\Guillermo\Desktop\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.UI.exe
 C:\Users\Guillermo\Desktop\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.UI.pdb
-C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.Transferencias.TransferenciaFormulario.resources
 C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.ABM_de_Usuario.UsuarioListado.resources
 C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.ABM_de_Usuario.UsuarioEdicion.resources
 C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.ABM_Rol.RolListado.resources
 C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.ABM_Rol.RolEdicion.resources
 C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.Login.Login.resources
-C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.Prueba.resources
-C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.Prueba1.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.FormulariosBase.FormBase.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.Transferencias.Transferencias.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.ControlesCustomizados.ucGrilla.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.Depositos.Depositos.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.ABM_Cuenta.CuentaListado.resources
+C:\Users\Guillermo\Desktop\Gestion de datos\Trabajo Practico\TP-GDD\src\PagoElectronico\obj\Debug\PagoElectronico.ABM_Cuenta.CuentaEdicion.resources

@@ -73,7 +73,9 @@ namespace PagoElectronico.ABM_de_Usuario
         {
             try
             {
-
+                RolNegocio miRolNegocio = new RolNegocio();
+                List<Rol> lstRolesTodos = miRolNegocio.ObtenerRoles(new Dictionary<string, object>());
+                ManejadorCombos.CargarListBoxRoles(ref lstNoAsignados, lstRolesTodos);
 
             }
             catch (Exception ex)
@@ -101,12 +103,12 @@ namespace PagoElectronico.ABM_de_Usuario
             {
                 txtUsername.Text = Usuario.Username;
                 txtUsername.ReadOnly = true; // es la clave, no se puede editar.
-
-                txtPassword.Text = Usuario.Password;
+                //txtPassword.Text = Usuario.Password;
                 txtPassword.ReadOnly = true;
                 chkInhabilitado.Checked = Usuario.Inhabilitado;
                 txtPregunta.Text = Usuario.PreguntaSecreta;
-                txtRespuesta.Text = Usuario.RespuestaSecreta;
+                //txtRespuesta.Text = Usuario.RespuestaSecreta;
+                txtRespuesta.ReadOnly = true;
                 lblFechaCreacion.Text = Convert.ToString(Usuario.FechaCreacion);
                 lblFechaModificacion.Text = Usuario.FechaUltimaModificacion != DateTime.MinValue ? Convert.ToString(Usuario.FechaUltimaModificacion) : string.Empty;
 
@@ -139,10 +141,18 @@ namespace PagoElectronico.ABM_de_Usuario
                 {
                     usuario.FechaUltimaModificacion = DateTime.Now; // Ver si tiene que ser parametro de configuración.
                 }
+
+                string blancoEncriptado = Encriptador.Encriptar(string.Empty);
                 usuario.Username = txtUsername.Text;
-                usuario.Password = txtPassword.Text;
+                if (Encriptador.Encriptar(txtPassword.Text) != blancoEncriptado)
+                {
+                    usuario.Password = Encriptador.Encriptar(txtPassword.Text);
+                }
                 usuario.PreguntaSecreta = txtPregunta.Text;
-                usuario.RespuestaSecreta = txtRespuesta.Text;
+                if (Encriptador.Encriptar(txtRespuesta.Text) != blancoEncriptado)
+                {
+                    usuario.RespuestaSecreta = Encriptador.Encriptar(txtRespuesta.Text);
+                }
                 usuario.Inhabilitado = chkInhabilitado.Checked;
                 usuario.FechaCreacion = (lblFechaCreacion.Text != string.Empty) ? Convert.ToDateTime(lblFechaCreacion.Text) : DateTime.MinValue;
                 usuario.Roles = (List<Rol>)lstAsignados.DataSource;
@@ -195,8 +205,8 @@ namespace PagoElectronico.ABM_de_Usuario
             {
                 if (lstOrigen.SelectedItem != null)
                 {
-                    List<Rol> lstNuevoOrigen = (List<Rol>)lstOrigen.DataSource;
-                    List<Rol> lstNuevoDestino = (List<Rol>)lstDestino.DataSource;
+                    List<Rol> lstNuevoOrigen = (List<Rol>)lstOrigen.DataSource ?? new List<Rol>();
+                    List<Rol> lstNuevoDestino = (List<Rol>)lstDestino.DataSource ?? new List<Rol>();
 
                     if (!moverTodos)
                     {

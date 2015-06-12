@@ -184,6 +184,19 @@ namespace PagoElectronico.Entidades.Clases
             }
         }
 
+        private string usuario;
+        public string Usuario
+        {
+            get
+            {
+                return usuario;
+            }
+            set
+            {
+                usuario = value;
+            }
+        }
+
         private bool baja;
         public bool Baja
         {

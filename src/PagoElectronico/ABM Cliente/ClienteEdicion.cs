@@ -71,7 +71,7 @@ namespace PagoElectronico.ABM_Cliente
             try
             {
                 ManejadorCombos.CargarComboPais(ref cmbPais);
-                ManejadorCombos.CargarComoboTipoDocumento(ref cmbTipoDoc);
+                ManejadorCombos.CargarComboTipoDocumento(ref cmbTipoDoc);
 
             }
             catch (Exception ex)

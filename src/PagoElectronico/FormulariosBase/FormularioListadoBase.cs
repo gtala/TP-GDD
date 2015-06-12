@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace PagoElectronico.FormulariosBase
 {
-    public partial class FormularioListadoBase : Form
+    public partial class FormularioListadoBase : FormBase
     {
         public FormularioListadoBase()
         {
@@ -30,9 +30,15 @@ namespace PagoElectronico.FormulariosBase
             bool tieneFilas = (dgListado.Rows.Count > 0);
             btnEliminar.Enabled = tieneFilas;
             btnModificar.Enabled = tieneFilas;
+            btnSeleccionar.Enabled = tieneFilas;
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
         {
 
         }

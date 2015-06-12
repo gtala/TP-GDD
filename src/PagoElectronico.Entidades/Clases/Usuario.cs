@@ -1,7 +1,4 @@
 ﻿using System;
-using PagoElectronico.Entidades.Clases;
-using System.Security.Cryptography;
-using System.Text;
 using System.Collections.Generic;
 
 namespace PagoElectronico.Entidades.Clases
@@ -152,20 +149,6 @@ namespace PagoElectronico.Entidades.Clases
             }
         }
 
-        public static string encriptar(string cadena)
-        {
-
-            var proveedor = new SHA256Managed();
-
-            byte[] inputBytes = Encoding.UTF8.GetBytes(cadena);
-            byte[] hashedBytes = proveedor.ComputeHash(inputBytes);
-
-            StringBuilder salida = new StringBuilder();
-
-            for (int i = 0; i < hashedBytes.Length; i++)
-                salida.Append(hashedBytes[i].ToString("x2").ToLower());
-
-            return salida.ToString();
-        }
+        
     }
 }

@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using PagoElectronico.Entidades.Clases;
+using PagoElectronico.FormulariosBase;
 using PagoElectronico.Negocio.Clases;
 using PagoElectronico.Util;
 
 namespace PagoElectronico.Login
 {
-    public partial class Login : Form
+    public partial class Login : FormBase
     {
         #region - Propiedades -
 
@@ -70,22 +66,39 @@ namespace PagoElectronico.Login
         {
             if (!usuarioLogueado.Inhabilitado)
             {
-                if (usuarioLogueado.Password.ToUpper().Trim() == txtPassword.Text.ToUpper().Trim())
+                string paswordIngresadoEncriptado = Encriptador.Encriptar(txtPassword.Text);
+                bool logueoCorrecto = usuarioLogueado.Password == paswordIngresadoEncriptado;
+                Negocio.Helpers.UtilNegocio util = new PagoElectronico.Negocio.Helpers.UtilNegocio();
+
+                if (logueoCorrecto)
                 {
+                    util.GuardarAuditoriaLogin(usuarioLogueado.Username, logueoCorrecto, usuarioLogueado.CantidadIntentosFallidos + 1);
+
                     ReiniciarIntentosFallidos(usuarioLogueado);
-                    if (usuarioLogueado.Roles != null && usuarioLogueado.Roles.Count > 1)
+                    //Solo roles habilitados
+                    usuarioLogueado.Roles = usuarioLogueado.Roles.Where(r => !r.Estado).ToList();
+
+                    if (usuarioLogueado.Roles != null && usuarioLogueado.Roles.Count > 0)
                     {
-                        PrepararSeleccionRoles();
+                        if (usuarioLogueado.Roles.Count > 1)
+                        {
+                            PrepararSeleccionRoles();
+                        }
+                        else
+                        {
+                            usuarioLogueado.RolActivo = usuarioLogueado.Roles[0];
+                            MostrarMenu(usuarioLogueado);
+                        }
                     }
                     else
                     {
-                        usuarioLogueado.RolActivo = usuarioLogueado.Roles[0];
-                        MostrarMenu(usuarioLogueado);
+                        MessageBox.Show("El usuario [" + txtUsername.Text + "] no tiene roles habilitados asignados. Por favor comuniquese con el Administrador del sistema.", "Login", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                 }
                 else
                 {
                     RegistrarIntentoFallido(usuarioLogueado);
+                    util.GuardarAuditoriaLogin(usuarioLogueado.Username, logueoCorrecto, usuarioLogueado.CantidadIntentosFallidos);
                     if (usuarioLogueado.Inhabilitado)
                     {
                         MessageBox.Show("El usuario [" + txtUsername.Text + "] fué Inhabilitado por superar la cantidad de intentos fallidos(3). Por favor comuniquese con el Administrador del sistema.", "Login", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -95,6 +108,8 @@ namespace PagoElectronico.Login
                         MostrarMensajeErrorLogin();
                     }
                 }
+
+
             }
             else
             {
@@ -150,15 +165,15 @@ namespace PagoElectronico.Login
         {
             if (ValidateChildren())
             {
-                foreach (Rol rol in usuarioLogueado.Roles )
+                foreach (Rol rol in usuarioLogueado.Roles)
                 {
-                    if((int)cmbRoles.SelectedValue == rol.Codigo )
+                    if ((int)cmbRoles.SelectedValue == rol.Codigo)
                     {
                         usuarioLogueado.RolActivo = rol;
                         MostrarMenu(usuarioLogueado);
                         break;
                     }
-            		 
+
                 }
             }
         }

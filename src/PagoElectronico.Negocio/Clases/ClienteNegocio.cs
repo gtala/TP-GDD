@@ -21,6 +21,19 @@ namespace PagoElectronico.Negocio.Clases
             }
         }
 
+        public Cliente ObtenerClientePorUsuario(string username)
+        {
+            try
+            {
+                miClienteDatos = new ClienteDatos();
+                return miClienteDatos.ObtenerClientePorUsuario(username);
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public void GuardarCliente(Cliente cliente)
         {
             try

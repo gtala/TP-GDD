@@ -7,10 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using PagoElectronico.Entidades.Clases;
+using PagoElectronico.FormulariosBase;
+using PagoElectronico.Negocio.Clases;
 
 namespace PagoElectronico
 {
-    public partial class Principal : Form
+    public partial class Principal : FormBase
     {
         private Usuario usuarioActivo;
         public Usuario UsuarioActivo
@@ -25,6 +27,21 @@ namespace PagoElectronico
             }
         }
 
+        private Cliente clienteSesion;
+        public Cliente ClienteSesion
+        {
+            get
+            {
+                return clienteSesion;
+            }
+            set
+            {
+                clienteSesion = value;
+            }
+        }
+
+        private ClienteNegocio clienteNegocio;
+
 
         public Principal()
         {
@@ -36,6 +53,20 @@ namespace PagoElectronico
             InitializeComponent();
             login.Visible = false;
             usuarioActivo = usuarioLogin;
+            clienteNegocio = new ClienteNegocio();
+            clienteSesion = clienteNegocio.ObtenerClientePorUsuario(usuarioActivo.Username);
+
+            if (clienteSesion != null && clienteSesion.Baja == true)
+            {
+                string tooltip = "Cliente Inhabilitado";
+                btnDepositos.Enabled = false;
+                btnRetiro.Enabled = false;
+                btnTransferencias.Enabled = false;
+
+                btnDepositos.ToolTipText = tooltip;
+                btnRetiro.ToolTipText = tooltip;
+                btnTransferencias.ToolTipText = tooltip;
+            }
 
             foreach (ToolStripItem item in tsMenu.Items)
             {
@@ -58,8 +89,14 @@ namespace PagoElectronico
 
         private void btnTransferencia_Click(object sender, EventArgs e)
         {
-            Transferencias.TransferenciaFormulario formTrans = new Transferencias.TransferenciaFormulario();
-            formTrans.ShowDialog(this);
+            Transferencias.Transferencias formTrans = new Transferencias.Transferencias(usuarioActivo);
+            if (!formTrans.IsDisposed)
+            {
+                formTrans.ShowDialog(this);
+            }
+            else {
+                MessageBox.Show("No existen cuentas asociadas al usuario logueado.", "Transferencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);                
+            }
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
@@ -82,38 +119,44 @@ namespace PagoElectronico
 
         private void btnCuentas_Click(object sender, EventArgs e)
         {
-            ABM_Cuenta.CuentaListado formCuentas = new ABM_Cuenta.CuentaListado();
+            ABM_Cuenta.CuentaListado formCuentas = new ABM_Cuenta.CuentaListado(usuarioActivo);
             formCuentas.ShowDialog(this);
         }
 
         private void btnTarjetas_Click(object sender, EventArgs e)
         {
-
+            Transferencias.Transferencias formTrans = new Transferencias.Transferencias(usuarioActivo);
+            formTrans.ShowDialog(this);
         }
 
         private void btnDepositos_Click(object sender, EventArgs e)
         {
-
+            //Depositos.Depositos formDepo = Depositos.Depositos();
+            //formTrans.ShowDialog(this);
         }
 
         private void btnRetiro_Click(object sender, EventArgs e)
         {
-
+            Transferencias.Transferencias formTrans = new Transferencias.Transferencias(usuarioActivo);
+            formTrans.ShowDialog(this);
         }
 
         private void btnFacturacion_Click(object sender, EventArgs e)
         {
-
+            Transferencias.Transferencias formTrans = new Transferencias.Transferencias(usuarioActivo);
+            formTrans.ShowDialog(this);
         }
 
         private void btnSaldo_Click(object sender, EventArgs e)
         {
-
+            Transferencias.Transferencias formTrans = new Transferencias.Transferencias(usuarioActivo);
+            formTrans.ShowDialog(this);
         }
 
         private void btnEstadisticas_Click(object sender, EventArgs e)
         {
-
+            Transferencias.Transferencias formTrans = new Transferencias.Transferencias(usuarioActivo);
+            formTrans.ShowDialog(this);
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

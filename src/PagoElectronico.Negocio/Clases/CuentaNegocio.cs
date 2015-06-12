@@ -8,12 +8,12 @@ namespace PagoElectronico.Negocio.Clases
     {
         Datos.Clases.CuentaDatos miCuentaDatos;
 
-        public List<Cuenta> ObtenerCuentas(Dictionary<string, object> filtros)
+        public  List<Cuenta> ObtenerCuentasPorCliente(int cliente)
         {
             try
             {
                 miCuentaDatos = new CuentaDatos();
-                return miCuentaDatos.ObtenerCuentas(filtros);
+                return miCuentaDatos.ObtenerCuentasPorCliente(cliente);
             }
             catch (System.Exception ex)
             {
@@ -21,12 +21,12 @@ namespace PagoElectronico.Negocio.Clases
             }
         }
 
-        public void GuardarCuenta(Cuenta cuenta)
+        public void GuardarCuenta(Cuenta cuenta, bool esAlta)
         {
             try
             {
                 miCuentaDatos = new CuentaDatos();
-                miCuentaDatos.GuardarCuenta(cuenta);
+                miCuentaDatos.GuardarCuenta(cuenta, esAlta);
             }
             catch (System.Exception ex)
             {
@@ -36,8 +36,8 @@ namespace PagoElectronico.Negocio.Clases
 
         public void EliminarCuenta(int codigoCuenta)
         {
-            miCuentaDatos = new CuentaDatos();
-            miCuentaDatos.EliminarCuenta(codigoCuenta);
+            //miCuentaDatos = new CuentaDatos();
+            //miCuentaDatos.GuardarCuenta(
         }
     }
 }

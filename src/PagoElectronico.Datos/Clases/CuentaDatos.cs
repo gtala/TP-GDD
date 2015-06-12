@@ -16,14 +16,16 @@ namespace PagoElectronico.Datos.Clases
         /// Devuelve un listado de Cuentas
         /// </summary>
         /// <returns></returns>
-        public List<Cuenta> ObtenerCuentas(Dictionary<string, object> filtros)
+        public List<Cuenta> ObtenerCuentasPorCliente(int cliente)
         {
             try
             {
+
+                XDocument clienteXml = new XDocument(new XElement("ClienteCodigo", cliente));
+
                 DataTable dtCuentas = new DataTable();
                 miConexionSql = new Conexion();
-                XDocument filtrosXml = UtilDatos.ArmarFiltrosXml(filtros);
-                dtCuentas = miConexionSql.EjecutarProcedure("Sp_ObtenerCuentas", filtrosXml, "@filtrosXml");
+                dtCuentas = miConexionSql.EjecutarProcedure("Sp_ObtenerCuentasPorCliente", clienteXml, "@ClienteXML");
                 List<Cuenta> lstCuentas = MapearDataTableLista(dtCuentas);
 
                 return lstCuentas;
@@ -41,31 +43,35 @@ namespace PagoElectronico.Datos.Clases
             try
             {
                 lstCuentas = (from x in dtCuentas.AsEnumerable()
-                            select new Cuenta
-                            {
-                                Codigo = Convert.ToInt32(Convert.ToString(x["Cuenta_Codigo"])),
-                                Nombre = Convert.ToString(x["Cuenta_Nombre"]),
-                                Estado = Convert.ToBoolean(x["Cuenta_Estado"])
-                            }).ToList();
+                              select new Cuenta
+                              {
+                                  Numero = Convert.ToInt64(Convert.ToString(x["Cuenta_Numero"])),
+                                  Pais = new Pais
+                                  {
+                                      Codigo = Convert.ToInt32(Convert.ToString(x["Pais_Codigo"] ?? string.Empty)),
+                                      Descipcion = Convert.ToString(x["Pais_Desc"] ?? string.Empty)
+                                  },
+                                  Tipo = new TipoCuenta
+                                  {
+                                      Codigo = Convert.ToInt32(Convert.ToString(x["Tipo_Cuenta_Tipo"] ?? string.Empty)),
+                                      Descipcion = Convert.ToString(x["Tipo_Cuenta_Desc"] ?? string.Empty),
+                                      DiasDuracion = Convert.ToInt32(Convert.ToString(x["Tipo_Cuenta_Dias_Duracion"] == DBNull.Value ? "0" : x["Tipo_Cuenta_Dias_Duracion"])),
+                                      Costo = Convert.ToDouble(Convert.ToString(x["Tipo_Cuenta_Costo"] ?? string.Empty))
+                                  },
+                                  MonedaCodigo = Convert.ToInt32(Convert.ToString(x["Moneda_Tipo"] ?? string.Empty)),
+                                  Moneda = Convert.ToString(x["Moneda_Desc"] ?? string.Empty),
+                                  Saldo = Convert.ToDouble(x["Cuenta_Saldo"] == DBNull.Value ? "0" : Convert.ToString(x["Cuenta_Saldo"])),
+                                  Estado = new EstadoCuenta
+                                  {
+                                      Codigo = Convert.ToInt32(Convert.ToString(x["Estado_Cuenta_Id"] ?? string.Empty)),
+                                      Descipcion = Convert.ToString(x["Estado_Cuenta_Desc"] ?? string.Empty)
+                                  },
+                                  Cliente = Convert.ToInt32(Convert.ToString(x["Cuenta_Cliente"] ?? string.Empty)),
+                                  FechaCierre = x["Cuenta_Fecha_Cierre"] == DBNull.Value ? DateTime.MinValue : Convert.ToDateTime(Convert.ToString(x["Cuenta_Fecha_Cierre"])),
+                                  FechaCreacion = Convert.ToDateTime(Convert.ToString(x["Cuenta_Fecha_Creacion"] ?? string.Empty))
 
-                lstCuentas = lstCuentas.GroupBy(a => a.Codigo).Select(g => g.First()).ToList();
+                              }).ToList();
 
-                //Cargo las funcionalidades de cada Cuenta
-                foreach (Cuenta r in lstCuentas)
-                {
-                    List<Funcionalidad> lstFuncionalidades = new List<Funcionalidad>();
-
-                    lstFuncionalidades = (from x in dtCuentas.AsEnumerable()
-                                          where Convert.ToInt32(Convert.ToString(x["Cuenta_Codigo"])) == r.Codigo
-                                               && x["Func_Codigo"] != DBNull.Value
-                                          select new Funcionalidad
-                                          {
-                                              Codigo = Convert.ToInt32(Convert.ToString(x["Func_Codigo"])),
-                                              Nombre = Convert.ToString(x["Func_Desc"])
-                                          }).ToList();
-
-                    r.Funcionalidades = lstFuncionalidades;
-                }
                 return lstCuentas;
             }
             catch (Exception ex)
@@ -74,13 +80,13 @@ namespace PagoElectronico.Datos.Clases
             }
         }
 
-        public void GuardarCuenta(Cuenta rol)
+        public void GuardarCuenta(Cuenta cuenta, bool esAlta)
         {
             try
             {
-                XDocument rolXml = ObtenerCuentaXml(rol);
+                XDocument cuentaXml = ObtenerCuentaXml(cuenta, esAlta);
                 miConexionSql = new Conexion();
-                miConexionSql.EjecutarProcedure("@XmlCuenta", "Sp_GuardarCuenta", rolXml);
+                miConexionSql.EjecutarProcedure("@XmlCuenta", "Sp_GuardarCuenta", cuentaXml);
             }
             catch (Exception ex)
             {
@@ -88,40 +94,25 @@ namespace PagoElectronico.Datos.Clases
             }
         }
 
-        private XDocument ObtenerCuentaXml(Cuenta rol)
+        private XDocument ObtenerCuentaXml(Cuenta cuenta, bool esAlta)
         {
-            //Funcionalidades
-            XElement xmlFuncionalidades = new XElement("Funcionalidades");
-            XElement xmlFuncionalidad;
-            foreach (Funcionalidad item in rol.Funcionalidades)
-            {
-                xmlFuncionalidad = new XElement("Funcionalidad",
-                    new XElement("Codigo", item.Codigo));
-                //new XElement("Nombre", item.Nombre));
-
-                xmlFuncionalidades.Add(xmlFuncionalidad);
-            }
-
-            XDocument rolXml = new XDocument(
+            XDocument cuentaXml = new XDocument(
                 new XElement("Cuenta",
-                new XElement("Codigo", rol.Codigo),
-                new XElement("Nombre", rol.Nombre),
-                new XElement("Estado", rol.Estado),
-                xmlFuncionalidades));
-            return rolXml;
-        }
+                new XElement("EsAlta", esAlta),
+                new XElement("Numero", cuenta.Numero),
+                new XElement("MonedaCodigo", cuenta.MonedaCodigo),
+                new XElement("Pais", cuenta.Pais.Codigo),
+                new XElement("CodCliente", cuenta.Cliente),
+                new XElement("TipoCuenta", cuenta.Tipo.Codigo),
+                new XElement("Estado", cuenta.Estado.Codigo),
+                new XElement("FechaCreacion", Convert.ToString(cuenta.FechaCreacion))));
 
-        public void EliminarCuenta(int codigoCuenta)
-        {
-            try
+            if (cuenta.FechaCierre != DateTime.MinValue)
             {
-                miConexionSql = new Conexion();
-                miConexionSql.EjecutarProcedure("Sp_EliminarCuenta", "@Codigo", codigoCuenta);
+                cuentaXml.Document.Root.Add(new XElement("FechaCierre", Convert.ToString(cuenta.FechaCierre)));
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+
+            return cuentaXml;
         }
     }
 }

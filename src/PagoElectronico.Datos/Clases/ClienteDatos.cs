@@ -34,6 +34,27 @@ namespace PagoElectronico.Datos.Clases
             }
         }
 
+        public Cliente ObtenerClientePorUsuario(string username)
+        {
+            try
+            {
+
+                XDocument clienteXml = new XDocument(
+                new XElement("Username", username));
+
+                DataTable dtClientes = new DataTable();
+                miConexionSql = new Conexion();
+                dtClientes = miConexionSql.EjecutarProcedure("Sp_ObtenerClientePorUsuario", clienteXml, "@UsernameXml");
+                List<Cliente> lstClientes = MapearDataTableLista(dtClientes);
+
+                return lstClientes.Count > 0 ? lstClientes.First() : null;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public void GuardarCliente(Cliente cliente)
         {
             try

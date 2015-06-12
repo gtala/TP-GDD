@@ -1,6 +1,6 @@
-﻿namespace PagoElectronico
+﻿namespace PagoElectronico.FormulariosBase
 {
-    partial class Prueba
+    partial class FormBase
     {
         /// <summary>
         /// Required designer variable.
@@ -28,29 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gbFiltros.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBase));
             this.SuspendLayout();
             // 
-            // btnModificar
-            // 
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
-            // 
-            // Prueba
+            // FormBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1090, 469);
-            this.Name = "Prueba";
-            this.Text = "Prueba";
-            this.gbFiltros.ResumeLayout(false);
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "FormBase";
+            this.Text = "FormBase";
             this.ResumeLayout(false);
 
         }

@@ -145,6 +145,11 @@ namespace PagoElectronico.Datos.Clases
                 usuario.FechaUltimaModificacion = SqlDateTime.MinValue.Value;
             }
 
+            if (usuario.FechaUltimaModificacion == DateTime.MinValue)
+            {
+                usuario.FechaUltimaModificacion = SqlDateTime.MinValue.Value;
+            }
+
             //Roles
             XElement xmlRoles = new XElement("Roles");
             XElement xmlRol;

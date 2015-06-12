@@ -42,5 +42,47 @@ namespace PagoElectronico.Datos.Helpers
                 throw ex;
             }
         }
+
+        public DataTable ObtenerMonedas()
+        {
+            try
+            {
+                DataTable dtMonedas = new DataTable();
+                Conexion miConexionSql = new Conexion();
+                dtMonedas = miConexionSql.EjecutarConsultaSql("select * from [BrainStormers].[Moneda]");
+                return dtMonedas;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void GuardarAuditoriaLogin(string username, bool accesoCorrecto, int numeroIntento)
+        {
+            try
+            {
+                Conexion miConexionSql = new Conexion();
+                XDocument auditoriaXml = new XDocument(
+                new XElement("Auditoria",
+                new XElement("Username", username),
+                new XElement("AccesoCorrecto", accesoCorrecto),
+                new XElement("NumeroIntento", numeroIntento)
+                ));
+                miConexionSql.EjecutarProcedure("@XmlAuditoria", "Sp_GuardarAuditoria", auditoriaXml);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public DataTable ObtenerTipoCuenta()
+        {
+            DataTable dtTipoCuenta = new DataTable();
+            Conexion miConexionSql = new Conexion();
+            dtTipoCuenta = miConexionSql.EjecutarConsultaSql("select * from [BrainStormers].[Tipo_Cuenta]");
+            return dtTipoCuenta;
+        }
     }
 }

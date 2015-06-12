@@ -13,6 +13,8 @@ namespace PagoElectronico.ABM_Cliente
         private ClienteNegocio miClienteNegocio;
         private ClienteEdicion miClienteEdicion;
         private List<Cliente> lstClientes;
+        public Transferencias.Transferencias TransferenciaFormulario;
+        public ABM_Cuenta.CuentaListado CuentasFormulario;
         Dictionary<string, object> lstFiltros;
 
         #region - Métodos -
@@ -29,7 +31,7 @@ namespace PagoElectronico.ABM_Cliente
             try
             {
                 ManejadorCombos.CargarComboPais(ref cmbFiltroPais);
-                ManejadorCombos.CargarComoboTipoDocumento(ref cmbTipoDocumento);
+                ManejadorCombos.CargarComboTipoDocumento(ref cmbTipoDocumento);
             }
             catch (Exception)
             {
@@ -170,6 +172,7 @@ namespace PagoElectronico.ABM_Cliente
                 {
                     btnEliminar.Enabled = false;
                     btnModificar.Enabled = false;
+                    btnSeleccionar.Enabled = false;
                 }
             }
             catch (Exception ex)
@@ -273,6 +276,24 @@ namespace PagoElectronico.ABM_Cliente
             var resultado = MessageBox.Show(MensajesInfo.InfoConfirmación.Replace("|@|", "este cliente"), "Baja cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (resultado == DialogResult.Yes)
                 EliminarRegistro();
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            Cliente miCliente = new Cliente();
+            DataGridViewRow miFilaSeleccionada = dgListado.SelectedRows[0];
+            int codigoCliente = Convert.ToInt32(miFilaSeleccionada.Cells[0].Value);
+            miCliente = lstClientes.Find(x => x.Codigo == codigoCliente);
+
+            if (CuentasFormulario != null)
+            {
+                CuentasFormulario.SetClienteSeleccionado(miCliente); 
+            }
+            if (TransferenciaFormulario != null)
+            {
+                TransferenciaFormulario.CargarGrillaDestino(miCliente);
+            }
+            this.Dispose();
         }
 
         #endregion

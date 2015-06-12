@@ -31,7 +31,7 @@ namespace PagoElectronico.Util
             }
         }
 
-        public static void CargarComoboTipoDocumento(ref ComboBox combo)
+        public static void CargarComboTipoDocumento(ref ComboBox combo)
         {
             try
             {
@@ -44,6 +44,42 @@ namespace PagoElectronico.Util
                 combo.DisplayMember = "Tipo_Doc_Desc";
                 combo.ValueMember = "Tipo_Doc_Cod";
                 combo.DataSource = dataTable;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static void CargarComboTipoCuenta(ref ComboBox combo)
+        {
+            try
+            {
+                UtilNegocio util = new UtilNegocio();
+
+                List<TipoCuenta> lstTiposCuenta= util.ObtenerTiposCuenta();
+                lstTiposCuenta.Insert(0, new TipoCuenta() { Codigo = -1, Descipcion = SELECCIONE });
+                combo.DataSource = lstTiposCuenta;
+                combo.ValueMember = "Codigo";
+                combo.DisplayMember = "Descipcion";
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static void CargarComboMoneda(ref ComboBox combo)
+        {
+            try
+            {
+                UtilNegocio util = new UtilNegocio();
+
+                List<Moneda> lstMonedas = util.ObtenerMonedas();
+                lstMonedas.Insert(0, new Moneda() { Codigo = -1, Descipcion = SELECCIONE });
+                combo.DataSource = lstMonedas;
+                combo.ValueMember = "Codigo";
+                combo.DisplayMember = "Descipcion";
             }
             catch (Exception ex)
             {
